@@ -62,3 +62,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # GraphQL is a query language for APIs and a server environment for fulfilling those queries
 gem 'graphql'
+
+gem 'graphiql-rails', group: :development
