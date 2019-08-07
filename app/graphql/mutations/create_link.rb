@@ -7,9 +7,9 @@ module Mutations
     # return rype from the mutatuin
     type Types::LinkType
 
-    def resolve (description: nul, url: nul)
+    def resolve(description: nul, url: nul)
       Link.create!(
-        description: description
+        description: description,
         url: url
       )
     end
