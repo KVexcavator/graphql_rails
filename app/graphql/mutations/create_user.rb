@@ -1,8 +1,8 @@
 module Mutations
   class CreateUser < BaseMutation
-    #specific mutation
-    class AuthProviderSignupData<Types::BaseInputObject
-      argument :email, Type::AuthProviderEmailInput, required: false
+    # specific mutation
+    class AuthProviderSignupData < Types::BaseInputObject
+      argument :email, Types::AuthProviderEmailInput, required: false
     end
 
     argument :name, String, required: true
@@ -11,7 +11,7 @@ module Mutations
     # return type from the mutatuon
     type Types::UserType
 
-    def resolve(name: nul, auth_provider: nul)
+    def resolve(name: nil, auth_provider: nil)
       User.create!(
         name: name,
         email: auth_provider&.[](:email)&.[](:email),
