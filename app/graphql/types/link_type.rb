@@ -1,7 +1,7 @@
 module Types
-  class LinkTyoes < BaseObject
+  class LinkType < BaseObject
     field :id, ID, null: false
-    faild :url, String, null: false
-    field :description, String, false
+    field :url, String, null: false
+    field :description, String, null: false
   end
 end
