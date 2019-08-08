@@ -5,7 +5,7 @@ class GraphqlController < ApplicationController
     operation_name = params[:operationName]
     context = {
       # current session and user
-      session: session
+      session: session,
       current_user: current_user
     }
     result = GraphqlRailsSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
