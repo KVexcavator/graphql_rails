@@ -1,4 +1,4 @@
 class Snap < ApplicationRecord
-  belongs_to :link
-  belongs_to :user
+  belongs_to :link, validate: true
+  belongs_to :user, validate: true
 end
